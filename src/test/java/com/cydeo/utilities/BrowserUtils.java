@@ -58,7 +58,7 @@ Method info:
     }
     public static void verifyTitle(String expectedTitle){
         String currentTitle= Driver.getDriver().getTitle();
-        Assert.assertEquals(currentTitle,expectedTitle);
+        Assert.assertEquals(expectedTitle,currentTitle);
     }
 
     public static void waitForInvisibilityOf(WebElement target){

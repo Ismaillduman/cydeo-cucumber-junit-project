@@ -52,8 +52,6 @@ public class Google_StepDefinitions {
 
     @Then("title is {string}")
     public void titleIs(String expected) {
-//        String actualTitle = Driver.getDriver().getTitle();
-//        Assert.assertEquals( expected, actualTitle);
         BrowserUtils.verifyTitle(expected);
 
     }
