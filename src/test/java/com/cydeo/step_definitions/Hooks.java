@@ -30,7 +30,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
         System.out.println("after all method");
-        Driver.closeDriver();
+       // Driver.closeDriver();
     }
 
 }
