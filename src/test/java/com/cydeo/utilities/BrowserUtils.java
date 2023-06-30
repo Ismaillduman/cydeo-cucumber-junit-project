@@ -56,9 +56,9 @@ Method info:
         String currentTitle= Driver.getDriver().getTitle();
         Assert.assertTrue(currentTitle.toLowerCase().contains(expectedTitle.toLowerCase()));
     }
-    public static void verifyTitle(String expectedTitle,WebDriver driver){
-        String currentTitle= driver.getTitle();
-        Assert.assertEquals(currentTitle,expectedTitle);
+    public static void verifyTitle(String expectedTitle){
+        String currentTitle= Driver.getDriver().getTitle();
+        Assert.assertEquals(expectedTitle,currentTitle);
     }
 
     public static void waitForInvisibilityOf(WebElement target){
