@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class DataTable_StepDefinitions {
 
@@ -25,6 +26,12 @@ public class DataTable_StepDefinitions {
 
         List<String> actualMonths= BrowserUtils.dropdown_options_as_string(tablePage.month_as_WebElement);
         Assert.assertEquals(expectedMonths,actualMonths);
+    }
+
+    @Then("officer is able to see any data he wants")
+    public void officerIsAbleToSeeAnyDataHeWants(Map<String ,String > driverInfo ) {
+        System.out.println(driverInfo.get("name"));
+        System.out.println(driverInfo);
     }
 }
 /* public static List<String> dropdownOptions_as_STRING(WebElement dropdownElement){
