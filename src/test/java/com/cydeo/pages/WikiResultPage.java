@@ -12,4 +12,7 @@ public class WikiResultPage {
 
     @FindBy(css = ".mw-page-title-main")
     public WebElement mainHeader;
+
+    @FindBy(xpath = "//div[contains(text(),'Steve Jobs bei der ')]")
+    public WebElement imageHeader;
 }

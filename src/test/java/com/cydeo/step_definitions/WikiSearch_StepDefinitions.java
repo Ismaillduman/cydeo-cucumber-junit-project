@@ -46,4 +46,10 @@ public class WikiSearch_StepDefinitions {
        String actualText= wikiResultPage.mainHeader.getText();
        Assert.assertEquals(word,actualText);
     }
+
+    @Then("User sees {string} is in the image header")
+    public void userSeesIsInTheImageHeader(String word) {
+        System.out.println(wikiResultPage.imageHeader.getText());
+                Assert.assertTrue(wikiResultPage.imageHeader.getText().contains(word));
+    }
 }
