@@ -23,28 +23,37 @@ public class R_VytrackLogin_StepDefinitions {
 
     @When("user enters the store manager information")
     public void user_enters_the_store_manager_information() {
-        loginPage.userNameInput.sendKeys(ConfigurationReader.getProperty("store_manager_username"));
-        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("store_manager_password"));
+        loginPage.login(ConfigurationReader.getProperty("store_manager_username"), ConfigurationReader.getProperty("store_manager_password"));
+
 
     }
 
     @Then("user should be able to login")
     public void user_should_be_able_to_login() {
-        loginPage.loginButton.click();
-        WebDriverWait wait= new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.titleContains("Dashboard"));
+
+        // BrowserUtils.waitForTitleContains("Dashboard");
+
+        loginPage.wait.until(ExpectedConditions.titleContains("Dashboard"));
         BrowserUtils.verifyTitle("Dashboard");
     }
 
     @When("user enters the driver information")
     public void userEntersTheDriverInformation() {
-        loginPage.userNameInput.sendKeys(ConfigurationReader.getProperty("driver_username"));
-        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("driver_password"));
+        loginPage.login(ConfigurationReader.getProperty("driver_username"), ConfigurationReader.getProperty("driver_password"));
+//        loginPage.userNameInput.sendKeys(ConfigurationReader.getProperty("driver_username"));
+//        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("driver_password"));
     }
 
     @When("user enters the sales manager information")
     public void userEntersTheSalesManagerInformation() {
-        loginPage.userNameInput.sendKeys(ConfigurationReader.getProperty("sales_manager_username"));
-        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("sales_manager_password"));
+        loginPage.login(ConfigurationReader.getProperty("sales_manager_username"), ConfigurationReader.getProperty("sales_manager_password"));
+//        loginPage.userNameInput.sendKeys(ConfigurationReader.getProperty("sales_manager_username"));
+//        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("sales_manager_password"));
+    }
+
+    @When("user enters the {string} information")
+    public void userEntersTheInformation(String userType) {
+
+        loginPage.dynamicLogin(userType);
     }
 }
