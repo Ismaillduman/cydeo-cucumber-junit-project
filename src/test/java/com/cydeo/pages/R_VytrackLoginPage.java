@@ -38,4 +38,7 @@ public class R_VytrackLoginPage {
     @FindBy(id = "_submit")
     public WebElement loginButton;
 
+    @FindBy(css = ".alert.alert-error")
+    public WebElement alertNotLoginMessage;
+
 }

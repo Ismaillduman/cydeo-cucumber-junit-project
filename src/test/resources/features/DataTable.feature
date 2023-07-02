@@ -17,7 +17,7 @@ Feature: Data Table Feature
       | October   |
       | November  |
       | December  |
-  @dataTable
+
   Scenario: Officer reads data about driver
     Then officer is able to see any data he wants
       | name    | Jane          |

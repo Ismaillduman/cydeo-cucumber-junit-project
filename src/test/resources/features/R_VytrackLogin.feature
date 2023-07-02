@@ -17,7 +17,7 @@ Feature:Users should be able to login
     Then user should be able to login
 
 
-  @Wip
+  @Wip @dataTable
   Scenario: Login as store manager
     When user enters the "store manager" information
     Then user should be able to login
