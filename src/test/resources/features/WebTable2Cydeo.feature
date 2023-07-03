@@ -23,7 +23,7 @@ Feature: Login functionality
       | username | password |
       | Test     | Tester   |
 
-  @webTable2
+
   Scenario:  Order place scenario
     Given user is already logged in to The Web table app
     When user is on the order page
@@ -32,11 +32,11 @@ Feature: Login functionality
       | MoneyCog   |
       | Familybea  |
       | Screenable |
-
+  @webTable2
   Scenario: Order place scenario
     Given user is already logged in to The Web table app
     When user is on the order page
     Then user sees below radio buttons enabled for
       | Visa             |
-      | Mastercard       |
+      | MasterCard       |
       | American Express |

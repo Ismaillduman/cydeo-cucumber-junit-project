@@ -18,7 +18,7 @@ import java.util.List;
 public class WebTable_2_Cydeo_StepDefinitions {
 
     WebTableCydeoPage webTablePage = new WebTableCydeoPage();
-    WebTable2OrderPage orderPage= new WebTable2OrderPage();
+    WebTable2OrderPage orderPage = new WebTable2OrderPage();
 
     @Given("User on the web-table.cydeo webpage")
     public void user_on_the_web_table_cydeo_webpage() {
@@ -57,7 +57,6 @@ public class WebTable_2_Cydeo_StepDefinitions {
     }
 
 
-
     @When("user is on the order page")
     public void userIsOnThePage() {
         orderPage.wait.until(ExpectedConditions.visibilityOf(orderPage.orderButton));
@@ -69,16 +68,16 @@ public class WebTable_2_Cydeo_StepDefinitions {
     public void userSeesBelowOptionsUnderDropdown(List<String> expected_product_as_string) {
 
 
-        Select products= new Select(orderPage.productOptions);
+        Select products = new Select(orderPage.productOptions);
 
-        List<WebElement> actual_products= products.getOptions();
+        List<WebElement> actual_products = products.getOptions();
 
-        List<String> actual_product_as_string= new ArrayList<>();
+        List<String> actual_product_as_string = new ArrayList<>();
         for (WebElement each_product_element : actual_products) {
             actual_product_as_string.add(each_product_element.getText());
         }
 
-Assert.assertEquals(expected_product_as_string,actual_product_as_string);
+        Assert.assertEquals(expected_product_as_string, actual_product_as_string);
 
 
     }
@@ -92,8 +91,11 @@ Assert.assertEquals(expected_product_as_string,actual_product_as_string);
     }
 
     @Then("user sees below radio buttons enabled for")
-    public void userSeesBelowRadioButtonsEnabledFor() {
-
-
+    public void userSeesBelowRadioButtonsEnabledFor(List<String> expected_PaymentCards) {
+        List<String> actual_PaymentCards_as_String = new ArrayList<>();
+        for (WebElement eachPaymentRadioButton : orderPage.paymentRadioButtons) {
+            actual_PaymentCards_as_String.add(eachPaymentRadioButton.getText());
+        }
+        Assert.assertEquals(expected_PaymentCards,actual_PaymentCards_as_String);
     }
 }

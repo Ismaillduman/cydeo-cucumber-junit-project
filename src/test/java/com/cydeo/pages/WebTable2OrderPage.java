@@ -24,6 +24,7 @@ public class WebTable2OrderPage {
     @FindBy(css = "[name='product']")
     public WebElement productOptions;
 
-
+@FindBy(xpath = "//div/label[@class='radio']")
+    public List<WebElement> paymentRadioButtons;
 
 }
