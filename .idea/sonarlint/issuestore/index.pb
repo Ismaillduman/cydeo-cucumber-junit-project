@@ -15,14 +15,18 @@ u
 Esrc/test/java/com/cydeo/step_definitions/Library_StepDefinitions.java,b\4\b4dcfd4c44dccf9d42e0034ab4b648ee42a8b297
 x
 Hsrc/test/java/com/cydeo/step_definitions/BingSearch_StepDefinitions.java,9\0\90e6b29e5856eaa5683956834a7bb7038f5746d5
-I
-configurations.properties,2\c\2c97bd367384d8a0d73284f278a56022fca5f928
 Å
 Qsrc/test/java/com/cydeo/step_definitions/R_VytrackDataTables_StepDefinitions.java,8\a\8aac6a98f84c94c3a583ddcc19a1c3fd41970e97
-e
-5src/test/java/com/cydeo/pages/R_VytrackLoginPage.java,4\7\47ba43e6470d3d21147f8d166056660990a1563c
-|
-Lsrc/test/java/com/cydeo/step_definitions/R_VytrackLogin_StepDefinitions.java,8\7\877cb06f9497fcd586347461c625728d36676ac4
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+`
+0src/test/java/com/cydeo/pages/DataTablePage.java,f\3\f333a7587e769ba9cf8632a5ed1c780426651d5b
+w
+Gsrc/test/java/com/cydeo/step_definitions/DataTable_StepDefinitions.java,0\c\0cc4b7089ea54b44b758c87b464101e321602446
+c
+3src/test/java/com/cydeo/utilities/BrowserUtils.java,b\d\bd87964a8b83d60c4e131ee116a7e27de4b51259
+i
+9src/test/java/com/cydeo/pages/R_VytrackDashboardPage.java,1\4\144c6083851e6a1d88c0bf59723120facf5d1983
+é
+^src/test/java/com/cydeo/step_definitions/R_VytractLoginInvalidCredentials_StepDefinitions.java,3\2\3213b7a1c0119516626beb494b6111cb910b90e4
