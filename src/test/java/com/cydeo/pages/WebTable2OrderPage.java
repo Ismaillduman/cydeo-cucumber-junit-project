@@ -24,7 +24,35 @@ public class WebTable2OrderPage {
     @FindBy(css = "[name='product']")
     public WebElement productOptions;
 
-@FindBy(xpath = "//div/label[@class='radio']")
+    @FindBy(xpath = "//div/label[@class='radio']")
     public List<WebElement> paymentRadioButtons;
+
+    @FindBy(css = "[name='quantity']")
+    public WebElement quantity;
+    @FindBy(xpath = "//button[.='Calculate']")
+    public WebElement calculateButton;
+
+    @FindBy(css = "[name='name']")
+    public WebElement customerName;
+
+    @FindBy(css = "[name='street']")
+    public WebElement street;
+    @FindBy(css = "[name='city']")
+    public WebElement city;
+
+    @FindBy(css = "[name='state']")
+    public WebElement state;
+
+    @FindBy(css = "[name='zip']")
+    public WebElement zip;
+
+    @FindBy(css = "[name='cardNo']")
+    public WebElement cardNo;
+
+    @FindBy(css = "[name='cardExp']")
+    public WebElement cardExp;
+
+    @FindBy(css = "[type='submit']")
+    public WebElement placeOrder;
 
 }

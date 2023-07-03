@@ -1,5 +1,6 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.ListOfAllOrdersPage;
 import com.cydeo.pages.WebTable2OrderPage;
 import com.cydeo.pages.WebTableCydeoPage;
 import com.cydeo.utilities.Driver;
@@ -19,6 +20,8 @@ public class WebTable_2_Cydeo_StepDefinitions {
 
     WebTableCydeoPage webTablePage = new WebTableCydeoPage();
     WebTable2OrderPage orderPage = new WebTable2OrderPage();
+
+    ListOfAllOrdersPage listOfAllOrdersPage= new ListOfAllOrdersPage();
 
     @Given("User on the web-table.cydeo webpage")
     public void user_on_the_web_table_cydeo_webpage() {
@@ -96,6 +99,72 @@ public class WebTable_2_Cydeo_StepDefinitions {
         for (WebElement eachPaymentRadioButton : orderPage.paymentRadioButtons) {
             actual_PaymentCards_as_String.add(eachPaymentRadioButton.getText());
         }
-        Assert.assertEquals(expected_PaymentCards,actual_PaymentCards_as_String);
+        Assert.assertEquals(expected_PaymentCards, actual_PaymentCards_as_String);
+    }
+
+
+    @And("user enters quantity {string}")
+    public void userEntersQuantity(String quantity) {
+        orderPage.quantity.sendKeys(quantity);
+    }
+
+    @And("user click the calculate button")
+    public void userClickTheCalculateButton() {
+        orderPage.calculateButton.click();
+    }
+
+    @And("user enters customer name {string}")
+    public void userEntersCustomerName(String customerName) {
+        orderPage.customerName.sendKeys(customerName);
+    }
+
+    @And("user enters street {string}")
+    public void userEntersStreet(String street) {
+        orderPage.street.sendKeys(street);
+    }
+
+    @And("user enters city {string}")
+    public void userEntersCity(String city) {
+        orderPage.city.sendKeys(city);
+    }
+
+    @And("user enters state {string}")
+    public void userEntersState(String state) {
+        orderPage.state.sendKeys(state);
+    }
+
+    @And("user enters zip {string}")
+    public void userEntersZip(String zip) {
+        orderPage.zip.sendKeys(zip);
+    }
+
+    @And("user enters cardType {string}")
+    public void userEntersCardType(String cardType) {
+        for (WebElement eachPaymentRadioButton : orderPage.paymentRadioButtons) {
+            if(cardType.equals(eachPaymentRadioButton.getText())){
+                eachPaymentRadioButton.click();
+            }
+        }
+    }
+
+    @And("user enters cardNo {string}")
+    public void userEntersCardNo(String cardNo) {
+        orderPage.cardNo.sendKeys(cardNo);
+    }
+
+    @And("user enters expiryDate {string}")
+    public void userEntersExpiryDate(String expiryDate) {
+        orderPage.cardExp.sendKeys(expiryDate);
+    }
+
+    @And("user clicks place order button")
+    public void userClicksPlaceOrderButton() {
+        orderPage.placeOrder.click();
+    }
+
+    @Then("user should see {string} in the firs row of the table")
+    public void userShouldSeeInTheFirsRowOfTheTable(String expectedName) {
+        String actual_name= listOfAllOrdersPage.actual_customer_name.getText();
+        Assert.assertEquals(expectedName,actual_name);
     }
 }
