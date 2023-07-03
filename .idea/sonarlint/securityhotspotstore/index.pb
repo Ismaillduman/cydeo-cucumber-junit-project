@@ -1,13 +1,14 @@
 
-]
--src/test/java/com/cydeo/utilities/Driver.java,2\c\2cd8c9b14ac256706ede87ab0fd74eb3297d31f7
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-t
-Dsrc/test/java/com/cydeo/step_definitions/Google_StepDefinitions.java,5\8\58366d8d2212dd6ca088dd3e5ae0d5a4de323af4
 ]
 -src/test/java/com/cydeo/pages/GooglePage.java,5\6\569f41d88e4d25a9e185a5d32b7406ef3898f0b6
-`
-0src/test/java/com/cydeo/pages/DataTablePage.java,f\3\f333a7587e769ba9cf8632a5ed1c780426651d5b
 j
 :src/test/java/com/cydeo/utilities/ConfigurationReader.java,7\c\7cded001377da2a44aacf4b95b3f155a6a78442e
+a
+1src/test/java/com/cydeo/pages/BingSearchPage.java,5\d\5ddd8b6235f2cd69b6b2e69929e0be2923e47986
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+i
+9src/test/java/com/cydeo/pages/R_VytrackDashboardPage.java,1\4\144c6083851e6a1d88c0bf59723120facf5d1983

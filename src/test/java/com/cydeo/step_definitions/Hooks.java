@@ -17,7 +17,7 @@ public class Hooks {
 
     @Before
     public void setUp() {
-        System.out.println("before all method");
+
 
     }
 
@@ -29,8 +29,8 @@ public class Hooks {
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
-        System.out.println("after all method");
-        Driver.closeDriver();
+
+       Driver.closeDriver();
     }
 
 }

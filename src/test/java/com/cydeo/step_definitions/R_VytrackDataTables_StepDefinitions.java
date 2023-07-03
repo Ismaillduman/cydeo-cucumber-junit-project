@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class R_DataTables_StepDefinitions {
+public class R_VytrackDataTables_StepDefinitions {
     R_VytrackDashboardPage dashboardPage= new R_VytrackDashboardPage();
     @Then("user should be able to see following modules")
     public void user_should_be_able_to_see_following_modules(List<String> expectedModules) {
