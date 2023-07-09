@@ -19,4 +19,7 @@ public class R_VytrackDashboardPage {
 
     @FindBy(xpath = "//span[@class='title title-level-1']") //4 modules i'm taking with that locator
     public List<WebElement> topALlModules;
+
+    @FindBy(css = "#user-menu>a")
+    public WebElement fullName;
 }

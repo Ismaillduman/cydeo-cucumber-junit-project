@@ -1,6 +1,7 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.R_VytrackLoginPage;
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -15,6 +16,7 @@ public class R_VytractLoginInvalidCredentials_StepDefinitions {
     @Then("the user should not be able to log in")
     public void the_user_should_not_be_able_to_log_in() {
         loginPage.wait.until(ExpectedConditions.visibilityOf(loginPage.alertNotLoginMessage));
+        Assert.assertEquals("Login", Driver.getDriver().getTitle());
         Assert.assertTrue(loginPage.alertNotLoginMessage.isDisplayed());
     }
 }
