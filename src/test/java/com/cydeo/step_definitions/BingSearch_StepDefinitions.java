@@ -39,6 +39,7 @@ public class BingSearch_StepDefinitions {
 
     @Then("title is on the bing {string}")
     public void titleIsOnTheBing(String expected_title) {
+        wait.until(ExpectedConditions.titleContains(expected_title));
         BrowserUtils.verifyTitle(expected_title);
     }
 }

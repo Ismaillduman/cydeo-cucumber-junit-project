@@ -1,5 +1,5 @@
 Feature: Login functionality
-  @webTable2
+
   Scenario: Url verification
     Given User on the web-table.cydeo webpage
     When User enter user name as Test
@@ -63,4 +63,4 @@ Feature: Login functionality
       | quantity | customerName | street | city | state | zip   | cardType | cardNo           | expiryDate | expectedName |
       | 3        | John Doe     | 7th st | NY   | NY    | 99999 | Visa     | 1111222233334444 | 12/25      | John Doe     |
       | 3        | Jane Doe     | 7th st | NY   | NY    | 99999 | Visa     | 1111222233334444 | 12/25      | Jane Doe     |
-      | 3        | Jack Doe     | 7th st | NY   | NY    | 99999 | Visa     | 1111222233334444 | 12/25      | Jack Doe     |
+      | 3        | Jack Doe     | 7th st | NY   | NY    | 99999 | Visa     | 334444           | 12/25      | Jack Doe     |
