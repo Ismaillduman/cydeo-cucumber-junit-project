@@ -5,13 +5,13 @@ Feature: Login functionality
     When User enter user name as Test
     And User enter password as Tester
     Then user verify URL
-
+  @webTable2
   Scenario: Url verification
     Given User on the web-table.cydeo webpage
     When User enter user name as "Test"
     And User enter password as "Tester"
     Then user verify URL
-
+  @webTable2
   Scenario Outline: Url verification
 
     Given User on the web-table.cydeo webpage
@@ -23,7 +23,7 @@ Feature: Login functionality
       | username | password |
       | Test     | Tester   |
 
-
+  @webTable2
   Scenario:  Order place scenario
     Given user is already logged in to The Web table app
     When user is on the order page
@@ -33,7 +33,7 @@ Feature: Login functionality
       | Familybea  |
       | Screenable |
 
-
+  @webTable2
   Scenario: Order place scenario
     Given user is already logged in to The Web table app
     When user is on the order page

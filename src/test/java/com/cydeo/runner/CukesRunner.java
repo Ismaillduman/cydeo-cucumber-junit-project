@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
         dryRun = false, //to check that all the snipes are implemented or not. if dryRun is true--> Without open browser
-        tags = "@dataTableReview6"
+        tags = "@webTable2"
 
 )
 
